@@ -1,0 +1,320 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FAF6EF;
+  --color-sand: #EAE0D0;
+  --color-terracotta: #B9694A;
+  --color-terracotta-hover: #A0573B;
+  --color-terracotta-dark: #8E4429;
+  --color-seaglass: #A9BFB1;
+  --color-seaglass-light: #C7D8CE;
+  --color-olive: #2B2E26;
+  --color-olive-muted: #575C4E;
+  --color-clay: #D9CBB8;
+  --color-clay-light: #EDE6DC;
+
+  /* Typography: Headers = Roboto, Sub-headers = Montreal */
+  --font-header: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-subheader: "Neue Montreal", "Montreal", "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Jost", "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-montreal: "Neue Montreal", "Montreal", "Montserrat", sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-clay);
+  }
+  
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-ivory);
+    color: var(--color-olive);
+    scroll-behavior: smooth;
+  }
+
+  /* Main Headers: Roboto with refined editorial letter-spacing and margins */
+  h1, h2, h3 {
+    font-family: var(--font-header);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  /* Sub Headers: Montreal */
+  h4, h5, h6 {
+    font-family: var(--font-subheader);
+    font-weight: 500;
+    line-height: 1.28;
+    letter-spacing: -0.01em;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF6EF;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D9CBB8;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B9694A;
+  }
+}
+
+/* Editorial Container & Spacing Utilities */
+.editorial-container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 640px) {
+  .editorial-container {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .editorial-container {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
+.section-spacing {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+@media (min-width: 640px) {
+  .section-spacing {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section-spacing {
+    padding-top: 8.5rem;
+    padding-bottom: 8.5rem;
+  }
+}
+
+.section-spacing-sm {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 640px) {
+  .section-spacing-sm {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Header typography class: Roboto */
+.editorial-title, .font-header {
+  font-family: var(--font-header);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+/* Sub-header typography class: Montreal */
+.sub-header, .font-subheader, .font-montreal {
+  font-family: var(--font-subheader);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.label-caps {
+  font-family: var(--font-subheader);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+/* Sliding underline link */
+.sliding-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-olive);
+  transition: color 0.3s ease;
+  font-family: var(--font-subheader);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  white-space: nowrap;
+}
+
+.sliding-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-terracotta);
+  transform-origin: bottom right;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.sliding-link:hover {
+  color: var(--color-terracotta);
+}
+
+.sliding-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.sliding-link-active {
+  color: var(--color-terracotta);
+}
+
+.sliding-link-active::after {
+  transform: scaleX(1);
+}
+
+/* Solid B2B Button with Generous Luxury Padding */
+.btn-terracotta {
+  background-color: var(--color-terracotta);
+  color: #FAF6EF;
+  font-family: var(--font-subheader);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.875rem 1.875rem;
+  border-radius: 2px;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  white-space: nowrap;
+}
+
+.btn-terracotta:hover {
+  background-color: var(--color-terracotta-hover);
+}
+
+.btn-terracotta:active {
+  background-color: var(--color-terracotta-dark);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-olive);
+  color: var(--color-olive);
+  font-family: var(--font-subheader);
+  background-color: transparent;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.875rem 1.875rem;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-olive);
+  color: var(--color-ivory);
+}
+
+.btn-sand {
+  border: 1px solid var(--color-clay);
+  background-color: var(--color-sand);
+  color: var(--color-olive);
+  font-family: var(--font-subheader);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.875rem 1.875rem;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.btn-sand:hover {
+  background-color: var(--color-clay-light);
+  border-color: var(--color-olive-muted);
+}
+
+/* Form Input & Card Padding Utilities */
+.input-editorial {
+  width: 100%;
+  background-color: #FAF6EF;
+  border: 1px solid var(--color-clay);
+  padding: 0.875rem 1.125rem;
+  font-size: 0.875rem;
+  color: var(--color-olive);
+  border-radius: 2px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.input-editorial:focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+  box-shadow: 0 0 0 1px var(--color-terracotta);
+}
+
+.input-editorial-dark {
+  width: 100%;
+  background-color: #1F211B;
+  border: 1px solid #3B3F34;
+  padding: 0.875rem 1.125rem;
+  font-size: 0.875rem;
+  color: #FAF6EF;
+  border-radius: 2px;
+  transition: border-color 0.2s ease;
+}
+.input-editorial-dark:focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+}
+
+.card-editorial {
+  background-color: #FAF6EF;
+  border: 1px solid var(--color-clay);
+  padding: 2rem;
+}
+@media (min-width: 640px) {
+  .card-editorial {
+    padding: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .card-editorial {
+    padding: 3rem;
+  }
+}
