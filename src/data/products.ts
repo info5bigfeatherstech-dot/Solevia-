@@ -39,9 +39,9 @@ export const PRODUCTS: Product[] = [
       'Custom woven brand & care labels with OEKO-TEX certification',
     ],
     images: [
+      '/products/paloma-ribbed-bikini.jpg',
       'https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1582639590011-f5a8416d1101?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80',
     ],
     description: 'Engineered for boutique swimwear labels demanding structural support without compromising on relaxed Mediterranean elegance. Features concealed underwire support, adjustable slim straps, and mid-coverage seamless brief.',
     season: 'Resort 2026',
@@ -86,6 +86,7 @@ export const PRODUCTS: Product[] = [
       'Pantone matching for solid shades from 300 sets/color',
     ],
     images: [
+      '/products/siena-triangle-bikini.jpg',
       'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80',
     ],
@@ -172,6 +173,7 @@ export const PRODUCTS: Product[] = [
       'Custom shirring tension for varying target demographics',
     ],
     images: [
+      '/products/capri-smocked-bikini.jpg',
       'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=1000&q=80',
     ],
     description: 'Combines artisan elastic shirring with modern quick-dry technology. Delivers gentle compression and supreme comfort across diverse body types without visible seams.',
@@ -214,6 +216,7 @@ export const PRODUCTS: Product[] = [
       'Wide supportive underband on top',
     ],
     images: [
+      '/products/marbella-vintage-bikini.jpg',
       'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=80',
     ],
     description: 'Retro silhouette reimagined for modern luxury beach clubs. High waist brief features interior front tummy-support mesh panel, matched with a supportive square-neck crop top.',
@@ -286,6 +289,7 @@ export const PRODUCTS: Product[] = [
     packaging: 'Individual premium zipper pouch',
     customizationOptions: ['Lurex metallic density', 'Bikini cut modifications'],
     images: [
+      '/products/ibiza-shimmer-bikini.jpg',
       'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80',
     ],
     description: 'Subtle sun-catching lurex thread woven into soft swimwear knit. Fully lined with smooth matte backing to prevent skin prickle.',
@@ -323,6 +327,7 @@ export const PRODUCTS: Product[] = [
     packaging: 'Eco carton export packed',
     customizationOptions: ['Interior silicone grip tape', 'Convertible criss-cross strap hooks'],
     images: [
+      '/products/mykonos-bandeau-bikini.jpg',
       'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80',
     ],
     description: 'Reinforced with hypoallergenic silicone gripper tape along top edge to ensure secure strapless fit during active resort wear.',
@@ -359,6 +364,7 @@ export const PRODUCTS: Product[] = [
     packaging: 'Branded frosted polybag',
     customizationOptions: ['Scallop depth variation', 'Matching laser-cut coverup'],
     images: [
+      '/products/santorini-scallop-bikini.jpg',
       'https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=1000&q=80',
     ],
     description: 'Precision ultrasonic laser cut scallop trim along neckline and hips that will not fray or curl after repeated wash cycles.',
@@ -396,6 +402,7 @@ export const PRODUCTS: Product[] = [
     packaging: 'Single eco zipper pouch',
     customizationOptions: ['Torso wrap length', 'Tie closure or clasp back'],
     images: [
+      '/products/corsica-wrap-bikini.jpg',
       'https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=1000&q=80',
     ],
     description: 'Longline wrap ties that crisscross around the ribcage. Paired with mid-rise cheeky bottoms.',
@@ -1197,7 +1204,7 @@ export const CATEGORIES_CONFIG = [
     moq: '300 sets per style',
     fobRange: '$7.80 - $12.50',
     leadTime: '30-35 days',
-    image: 'https://images.unsplash.com/photo-1576426863848-c21f53c60b19?auto=format&fit=crop&w=1000&q=80',
+    image: '/products/paloma-ribbed-bikini.jpg',
     count: 10,
   },
   {
